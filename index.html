@@ -3,21 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trojan Crypto | AI Copy Trading</title>
+    <title>Copy Trading Platform | Professional Trading Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* PU Prime Inspired Professional Design */
-        :root {
-            --primary-dark: #0a0b0d;
-            --primary-blue: #1a365d;
-            --accent-teal: #00d4aa;
-            --accent-gold: #d4af37;
-            --text-light: #f8fafc;
-            --text-gray: #94a3b8;
-            --card-bg: #141922;
-            --border-color: #2d3748;
-        }
-        
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -25,462 +14,756 @@
         }
         
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: var(--primary-dark);
-            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
         }
         
-        /* Top Alert Bar */
-        .alert-bar {
-            background: linear-gradient(90deg, var(--primary-blue) 0%, #2d3748 100%);
-            padding: 12px 0;
-            text-align: center;
-            font-size: 14px;
-            border-bottom: 1px solid var(--border-color);
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
-        .alert-bar span {
-            color: var(--accent-teal);
-            font-weight: 600;
+        /* Header Styles - Based on PuPrime header */
+        .main-header {
+            background: linear-gradient(135deg, #0a2540 0%, #1a365d 100%);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
-        /* Navigation */
-        .navbar {
+        .header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 5%;
-            background: rgba(10, 11, 13, 0.95);
-            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
         
         .logo {
             font-size: 28px;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--accent-teal) 0%, #4299e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .nav-links {
+            font-weight: bold;
+            color: #00aaff;
             display: flex;
-            gap: 40px;
             align-items: center;
+            gap: 10px;
         }
         
-        .nav-links a {
-            color: var(--text-light);
+        .logo span {
+            color: white;
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 8px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-login {
+            background: transparent;
+            border: 1px solid #00aaff;
+            color: #00aaff;
+        }
+        
+        .btn-register {
+            background: #00aaff;
+            border: 1px solid #00aaff;
+            color: white;
+        }
+        
+        .btn-login:hover {
+            background: rgba(0, 170, 255, 0.1);
+        }
+        
+        .btn-register:hover {
+            background: #0099ee;
+        }
+        
+        /* Navigation */
+        .main-nav {
+            padding-top: 15px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .nav-menu a {
+            color: white;
             text-decoration: none;
             font-weight: 500;
-            font-size: 15px;
             transition: color 0.3s;
+            position: relative;
         }
         
-        .nav-links a:hover {
-            color: var(--accent-teal);
+        .nav-menu a:hover {
+            color: #00aaff;
         }
         
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(10, 11, 13, 0.9), rgba(10, 11, 13, 0.9)),
-                        url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1920') center/cover;
-            padding: 100px 5%;
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00aaff;
+            transition: width 0.3s;
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section - Copy Trading Focus */
+        .hero-section {
+            background: linear-gradient(rgba(10, 37, 64, 0.9), rgba(10, 37, 64, 0.95)), url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
             text-align: center;
         }
         
-        .hero h1 {
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-title {
             font-size: 48px;
             margin-bottom: 20px;
-            font-weight: 700;
+            line-height: 1.2;
         }
         
-        .hero p {
-            font-size: 18px;
-            color: var(--text-gray);
-            max-width: 700px;
-            margin: 0 auto 40px;
-            line-height: 1.8;
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
         }
         
-        .highlight {
-            color: var(--accent-teal);
-            font-weight: 600;
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
         }
         
-        /* Live Stats */
-        .live-stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin: 60px auto;
-            max-width: 1200px;
-            padding: 0 20px;
-        }
-        
-        .stat-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px 20px;
-            text-align: center;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-teal);
-        }
-        
-        .stat-value {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, var(--accent-teal) 0%, #4299e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .stat-label {
-            color: var(--text-gray);
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 60px;
-            margin: 80px auto;
-            max-width: 800px;
-            text-align: center;
-            border: 1px solid var(--border-color);
-        }
-        
-        .cta-title {
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        
-        .cta-subtitle {
-            color: var(--text-gray);
-            margin-bottom: 40px;
-            font-size: 16px;
-        }
-        
-        /* Professional Button */
-        .telegram-connect {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: linear-gradient(135deg, var(--accent-teal) 0%, #4299e1 100%);
-            color: white;
-            padding: 18px 40px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            margin: 10px;
-        }
-        
-        .telegram-connect:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 212, 170, 0.3);
-        }
-        
-        /* Features Grid */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 20px;
-        }
-        
-        .feature-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 40px 30px;
+        .feature-item {
             text-align: center;
         }
         
         .feature-icon {
-            font-size: 40px;
-            margin-bottom: 20px;
-            color: var(--accent-teal);
+            font-size: 36px;
+            color: #00aaff;
+            margin-bottom: 10px;
         }
         
-        .feature-title {
-            font-size: 20px;
-            margin-bottom: 15px;
-            font-weight: 600;
+        .feature-text {
+            font-weight: 500;
         }
         
-        .feature-desc {
-            color: var(--text-gray);
-            font-size: 14px;
-            line-height: 1.6;
+        /* Telegram Integration Section */
+        .telegram-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+            text-align: center;
         }
         
-        /* Risk Warning */
-        .risk-warning {
-            background: rgba(220, 38, 38, 0.1);
-            border: 1px solid rgba(220, 38, 38, 0.3);
+        .telegram-card {
+            background: white;
             border-radius: 10px;
-            padding: 30px;
-            margin: 60px auto;
-            max-width: 1000px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
         }
         
-        .risk-title {
-            color: #fca5a5;
-            font-size: 18px;
+        .telegram-icon-large {
+            font-size: 60px;
+            color: #0088cc;
+            margin-bottom: 20px;
+        }
+        
+        .telegram-title {
+            font-size: 32px;
             margin-bottom: 15px;
-            font-weight: 600;
+            color: #333;
         }
         
-        .risk-text {
-            color: #fecaca;
-            font-size: 14px;
-            line-height: 1.8;
+        .telegram-description {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        
+        .telegram-btn {
+            background: #0088cc;
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.3);
+        }
+        
+        .telegram-btn:hover {
+            background: #0077b3;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.4);
+        }
+        
+        .btn-icon {
+            font-size: 24px;
+        }
+        
+        /* Trading Platform Features */
+        .features-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #0a2540;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card-icon {
+            font-size: 48px;
+            color: #00aaff;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #0a2540;
+        }
+        
+        /* Statistics Section */
+        .stats-section {
+            background: linear-gradient(135deg, #0a2540 0%, #1a365d 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .stat-item h3 {
+            font-size: 48px;
+            color: #00aaff;
+            margin-bottom: 10px;
         }
         
         /* Footer */
-        footer {
-            background: var(--primary-blue);
-            padding: 60px 5% 30px;
-            margin-top: 80px;
+        .main-footer {
+            background: #0a2540;
+            color: white;
+            padding: 60px 0 30px;
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
+            margin-bottom: 40px;
         }
         
-        .footer-section h3 {
-            font-size: 16px;
+        .footer-column h4 {
+            font-size: 20px;
             margin-bottom: 20px;
-            color: var(--accent-teal);
+            color: #00aaff;
         }
         
-        .footer-links {
+        .footer-column ul {
             list-style: none;
         }
         
-        .footer-links li {
-            margin-bottom: 12px;
+        .footer-column ul li {
+            margin-bottom: 10px;
         }
         
-        .footer-links a {
-            color: var(--text-gray);
+        .footer-column ul li a {
+            color: #ccc;
             text-decoration: none;
-            font-size: 14px;
             transition: color 0.3s;
         }
         
-        .footer-links a:hover {
-            color: var(--accent-teal);
+        .footer-column ul li a:hover {
+            color: #00aaff;
         }
         
         .copyright {
             text-align: center;
-            padding-top: 40px;
-            margin-top: 40px;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-gray);
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #ccc;
             font-size: 14px;
         }
         
-        /* Mobile Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .live-stats, .features, .footer-content {
-                grid-template-columns: 1fr;
+            .hero-title {
+                font-size: 36px;
             }
             
-            .hero h1 {
-                font-size: 32px;
+            .hero-subtitle {
+                font-size: 18px;
             }
             
-            .cta-section {
-                padding: 40px 20px;
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 15px;
             }
             
-            .nav-links {
-                display: none;
+            .header-top {
+                flex-direction: column;
+                gap: 15px;
             }
+            
+            .telegram-card {
+                padding: 30px 20px;
+            }
+            
+            .telegram-btn {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+        }
+        
+        /* Modal for Bot Link Configuration */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+        }
+        
+        .modal-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0a2540;
+        }
+        
+        .bot-link-input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #0a2540;
+            color: #0a2540;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
-    <!-- Alert Bar -->
-    <div class="alert-bar">
-        📈 <span>Live Trading Session Active</span> | Top Trader: CryptoWhale42 (+14.7% today) | Next Session: 14:30 UTC
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">TROJAN CRYPTO</div>
-        <div class="nav-links">
-            <a href="#copy-trading">Copy Trading</a>
-            <a href="#strategies">Strategies</a>
-            <a href="#performance">Performance</a>
-            <a href="#vip">VIP Access</a>
-            <a href="#support">Support</a>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    <span>TRADEPRO</span>
+                </div>
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-login">Login</a>
+                    <a href="#" class="btn btn-register">Open Account</a>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="#copy-trading">Copy Trading</a></li>
+                    <li><a href="#platform">Trading Platform</a></li>
+                    <li><a href="#markets">Markets</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Institutional Crypto Copy Trading</h1>
-        <p>Mirror trades from <span class="highlight">verified top performers</span> with AI-powered execution. Average returns of <span class="highlight">18.4% monthly</span> across 2,847 active portfolios.</p>
-        
-        <!-- Live Statistics -->
-        <div class="live-stats">
-            <div class="stat-card">
-                <div class="stat-value">$142.6M</div>
-                <div class="stat-label">Assets Trading</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">+2.14%</div>
-                <div class="stat-label">24h Performance</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">1,247</div>
-                <div class="stat-label">Live Trades</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">99.7%</div>
-                <div class="stat-label">Win Rate</div>
+    <section class="hero-section" id="copy-trading">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Professional Copy Trading Platform</h1>
+                <p class="hero-subtitle">Automate your trading by copying the strategies of successful traders. Start with as little as $100 and let experts trade for you.</p>
+                <a href="#" class="btn btn-register" style="padding: 15px 40px; font-size: 18px;">Start Copy Trading Now</a>
+                
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="feature-text">5000+ Expert Traders</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-text">Secure & Regulated</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="feature-text">Mobile Friendly</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="features">
-        <div class="feature-card">
-            <div class="feature-icon">🤖</div>
-            <h3 class="feature-title">AI Trade Execution</h3>
-            <p class="feature-desc">Machine learning algorithms execute trades at optimal market conditions with zero delay.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">📊</div>
-            <h3 class="feature-title">Portfolio Mirroring</h3>
-            <p class="feature-desc">Automatically replicate portfolios of top-performing traders with adjustable risk levels.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🔒</div>
-            <h3 class="feature-title">Non-Custodial Security</h3>
-            <p class="feature-desc">Your assets remain in your wallet. We never hold custody of your funds.</p>
+    <!-- Telegram Integration Section -->
+    <section class="telegram-section">
+        <div class="container">
+            <div class="telegram-card">
+                <div class="telegram-icon-large">
+                    <i class="fab fa-telegram"></i>
+                </div>
+                <h2 class="telegram-title">Connect with Our Trading Bot</h2>
+                <p class="telegram-description">
+                    Get real-time trading signals, market updates, and copy trading alerts directly on Telegram. 
+                    Our automated bot helps you make better trading decisions 24/7.
+                </p>
+                <button class="telegram-btn" id="connectTelegramBtn">
+                    <i class="fab fa-telegram btn-icon"></i>
+                    Connect Telegram Bot
+                </button>
+                <p style="margin-top: 20px; font-size: 14px; color: #888;">
+                    Click to configure your bot link or open the bot if already configured
+                </p>
+            </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <h2 class="cta-title">Secure Gateway Access Required</h2>
-        <p class="cta-subtitle">Connect your wallet through our encrypted Telegram gateway to initialize copy trading.</p>
-        
-        <!-- TELEGRAM BUTTON - CHANGE THIS LINK -->
-        <a href="https://t.me/YOUR_BOT_USERNAME" class="telegram-connect" id="connectButton">
-            <i class="fab fa-telegram"></i>
-            Connect via Secure Gateway
-            <i class="fas fa-arrow-right"></i>
-        </a>
-        
-        <p style="margin-top: 20px; color: var(--text-gray); font-size: 14px;">
-            <i class="fas fa-shield-alt"></i> Encrypted connection • Non-custodial • Institutional-grade security
-        </p>
+    <!-- Platform Features -->
+    <section class="features-section" id="platform">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Copy Trading Platform</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="feature-card-title">Automated Copy Trading</h3>
+                    <p>Automatically copy trades from top-performing traders with just one click.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="feature-card-title">Risk Management</h3>
+                    <p>Set stop-loss, take-profit, and customize risk parameters for each trader.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3 class="feature-card-title">Performance History</h3>
+                    <p>Analyze detailed statistics and historical performance of all traders.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="feature-card-title">Real-time Sync</h3>
+                    <p>Trades are copied instantly with minimal latency for optimal execution.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-card-title">Mobile App</h3>
+                    <p>Monitor and manage your copy trading portfolio from anywhere.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature-card-title">24/7 Support</h3>
+                    <p>Dedicated customer support for all your copy trading needs.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Risk Warning -->
-    <div class="risk-warning">
-        <h3 class="risk-title">⚠️ RISK WARNING</h3>
-        <p class="risk-text">
-            Crypto trading carries substantial risk of loss. Past performance does not guarantee future results. 
-            Only trade with capital you can afford to lose. This platform provides execution services only and 
-            does not constitute financial advice. Copy trading involves mirroring other traders' positions which 
-            may result in significant losses. Ensure you understand the risks involved before participating. 
-            The platform is not responsible for trading losses. All trading decisions are your own.
-        </p>
-    </div>
+    <!-- Statistics -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">Trusted by Traders Worldwide</h2>
+            <p style="max-width: 700px; margin: 0 auto 40px; opacity: 0.9;">
+                Join thousands of successful traders who use our platform for automated trading
+            </p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>50K+</h3>
+                    <p>Active Traders</p>
+                </div>
+                <div class="stat-item">
+                    <h3>$2B+</h3>
+                    <p>Monthly Volume</p>
+                </div>
+                <div class="stat-item">
+                    <h3>150+</h3>
+                    <p>Countries</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Trading Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Platform</h3>
-                <ul class="footer-links">
-                    <li><a href="#copy-trading">Copy Trading</a></li>
-                    <li><a href="#strategies">Trading Strategies</a></li>
-                    <li><a href="#performance">Performance</a></li>
-                    <li><a href="#vip">VIP Services</a></li>
-                </ul>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Copy Trading</h4>
+                    <ul>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Top Traders</a></li>
+                        <li><a href="#">Risk Management</a></li>
+                        <li><a href="#">Auto Copy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Markets</h4>
+                    <ul>
+                        <li><a href="#">Forex</a></li>
+                        <li><a href="#">Stocks</a></li>
+                        <li><a href="#">Indices</a></li>
+                        <li><a href="#">Commodities</a></li>
+                        <li><a href="#">Cryptocurrencies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#">Download</a></li>
+                        <li><a href="#">Web Platform</a></li>
+                        <li><a href="#">Mobile App</a></li>
+                        <li><a href="#">Platform Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Regulation</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Legal</h3>
-                <ul class="footer-links">
-                    <li><a href="#terms">Terms of Service</a></li>
-                    <li><a href="#privacy">Privacy Policy</a></li>
-                    <li><a href="#risk">Risk Disclosure</a></li>
-                    <li><a href="#compliance">Compliance</a></li>
-                </ul>
+            <div class="copyright">
+                <p>&copy; 2024 TradePro Copy Trading Platform. All rights reserved.</p>
+                <p style="margin-top: 10px;">This is a demonstration website for educational purposes.</p>
             </div>
-            <div class="footer-section">
-                <h3>Markets</h3>
-                <ul class="footer-links">
-                    <li><a href="#solana">Solana (SOL)</a></li>
-                    <li><a href="#bitcoin">Bitcoin (BTC)</a></li>
-                    <li><a href="#ethereum">Ethereum (ETH)</a></li>
-                    <li><a href="#altcoins">Altcoins</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect</h3>
-                <ul class="footer-links">
-                    <li><a href="https://t.me/YOUR_BOT_USERNAME">Telegram Gateway</a></li>
-                    <li><a href="#support">Support Desk</a></li>
-                    <li><a href="#status">System Status</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            © 2024 Trojan Crypto. All rights reserved. Crypto trading services provided through secure gateway technology.
-            <br>Not available to restricted jurisdictions.
         </div>
     </footer>
 
+    <!-- Telegram Bot Modal -->
+    <div class="modal-overlay" id="telegramModal">
+        <div class="modal-content">
+            <h3 class="modal-title">Configure Telegram Bot</h3>
+            <p>Enter your Telegram bot URL below. Users will be redirected to this link.</p>
+            
+            <input type="text" id="botLinkInput" class="bot-link-input" placeholder="https://t.me/your_trading_bot" value="https://t.me/">
+            
+            <div class="modal-buttons">
+                <button class="btn-success" id="saveBotLink">Save & Connect</button>
+                <button class="btn-outline" id="closeModal">Cancel</button>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 14px; color: #666;">
+                <strong>Example:</strong> https://t.me/your_trading_bot<br>
+                Already have a link saved? Just click "Save & Connect"
+            </p>
+        </div>
+    </div>
+
     <script>
-        // Make ALL buttons connect to Telegram
-        document.querySelectorAll('a, .nav-links a, .footer-links a, .feature-card, .stat-card').forEach(element => {
-            element.addEventListener('click', function(e) {
-                e.preventDefault();
+        // Telegram Bot Integration Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const telegramBtn = document.getElementById('connectTelegramBtn');
+            const telegramModal = document.getElementById('telegramModal');
+            const closeModalBtn = document.getElementById('closeModal');
+            const saveBotLinkBtn = document.getElementById('saveBotLink');
+            const botLinkInput = document.getElementById('botLinkInput');
+            
+            // Default bot link - REPLACE THIS WITH YOUR ACTUAL BOT LINK
+            const defaultBotLink = 'https://t.me/YOUR_BOT_USERNAME';
+            
+            // Check if user has a saved bot link
+            let savedBotLink = localStorage.getItem('tradingTelegramBot');
+            
+            // Set default value
+            if (!savedBotLink) {
+                savedBotLink = defaultBotLink;
+                localStorage.setItem('tradingTelegramBot', defaultBotLink);
+            }
+            
+            botLinkInput.value = savedBotLink;
+            
+            // Button click handler
+            telegramBtn.addEventListener('click', function() {
+                // Check if link is default
+                if (savedBotLink === defaultBotLink || savedBotLink === 'https://t.me/') {
+                    // Show modal to configure
+                    telegramModal.style.display = 'flex';
+                } else {
+                    // Open the saved bot link
+                    window.open(savedBotLink, '_blank');
+                }
+            });
+            
+            // Save bot link
+            saveBotLinkBtn.addEventListener('click', function() {
+                let link = botLinkInput.value.trim();
                 
-                // Show connection prompt
-                const userConfirmed = confirm("Secure gateway access required.\n\nConnect to Telegram to continue?");
+                // Add https:// if not present
+                if (link && !link.startsWith('http')) {
+                    link = 'https://' + link;
+                }
                 
-                if (userConfirmed) {
-                    // Redirect to your Telegram bot
-                    window.open("https://t.me/YOUR_BOT_USERNAME", "_blank");
+                // Basic validation
+                if (link && link.includes('t.me/')) {
+                    localStorage.setItem('tradingTelegramBot', link);
+                    telegramModal.style.display = 'none';
+                    
+                    // Update button text
+                    telegramBtn.innerHTML = '<i class="fab fa-telegram btn-icon"></i> Open Trading Bot';
+                    
+                    // Open the bot
+                    setTimeout(() => {
+                        window.open(link, '_blank');
+                    }, 300);
+                } else {
+                    alert('Please enter a valid Telegram bot URL (should contain t.me/)');
+                }
+            });
+            
+            // Close modal
+            closeModalBtn.addEventListener('click', function() {
+                telegramModal.style.display = 'none';
+            });
+            
+            // Close modal when clicking outside
+            telegramModal.addEventListener('click', function(e) {
+                if (e.target === telegramModal) {
+                    telegramModal.style.display = 'none';
+                }
+            });
+            
+            // Keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && telegramModal.style.display === 'flex') {
+                    telegramModal.style.display = 'none';
                 }
             });
         });
-
-        // Update bot username automatically
-        const botUsername = "YOUR_BOT_USERNAME"; // CHANGE THIS
-        document.querySelectorAll('a[href*="YOUR_BOT_USERNAME"]').forEach(link => {
-            link.href = link.href.replace("YOUR_BOT_USERNAME", botUsername);
+        
+        // Simple form validation for demo
+        document.querySelectorAll('.btn-register').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('This is a demonstration website. In a real implementation, this would open a registration form.');
+            });
         });
     </script>
 </body>
