@@ -1,58 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>TROJAN INVESTMENT PLATFORM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trojan Capital | Institutional-Grade Crypto</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 40px; background: #0a0e17; color: white; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 20px; }
-        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 40px 0; }
-        .stat-box { background: #1a1f2e; padding: 20px; border-radius: 10px; }
-        .cta-button { background: #00d4aa; color: white; padding: 20px 40px; font-size: 18px; border: none; border-radius: 10px; cursor: pointer; margin: 30px; text-decoration: none; display: inline-block; }
-        .telegram-btn { background: #0088cc; padding: 15px 30px; border-radius: 8px; color: white; text-decoration: none; display: inline-flex; align-items: center; }
-        .telegram-icon { width: 24px; margin-right: 10px; }
+        /* Professional Crypto Platform Styling */
+        :root {
+            --primary: #0a0b0d;
+            --secondary: #14161c;
+            --accent: #00d4aa;
+            --text: #e2e8f0;
+            --text-secondary: #94a3b8;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--accent) 0%, #667eea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 60px 0;
+        }
+        
+        .stat-card {
+            background: var(--secondary);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--secondary);
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            margin: 80px 0;
+        }
+        
+        .cta-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        
+        /* Professional Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 212, 170, 0.3);
+        }
+        
+        /* Security Badge */
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 212, 170, 0.1);
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .hero h1 { font-size: 36px; }
+            .cta-section { padding: 40px 20px; }
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>🚀 TROJAN INVESTMENT PLATFORM</h1>
-            <p>AI-Powered Solana Trading & Automated Yield Generation</p>
-        </div>
-        
-        <div class="stats">
-            <div class="stat-box">
-                <h3>$5.2M+</h3>
-                <p>Total Value Locked</p>
+        <nav>
+            <div class="logo">TROJAN</div>
+            <div style="display: flex; gap: 30px; align-items: center;">
+                <span style="color: var(--text-secondary);">Institutional Access</span>
+                <i class="fas fa-shield-alt" style="color: var(--accent);"></i>
             </div>
-            <div class="stat-box">
-                <h3>24.7%</h3>
-                <p>Average APY</p>
+        </nav>
+
+        <section class="hero">
+            <h1>Institutional-Grade<br>Crypto Wealth Management</h1>
+            <p>Access curated investment strategies and automated yield generation through secure, non-custodial wallet integration.</p>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value">$142.6M</div>
+                    <div class="stat-label">Assets Under Management</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">18.4%</div>
+                    <div class="stat-label">Average Annual Yield</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">2,847</div>
+                    <div class="stat-label">Active Portfolios</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">99.7%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
             </div>
-            <div class="stat-box">
-                <h3>12,589</h3>
-                <p>Active Investors</p>
-            </div>
-        </div>
-        
-        <h2>🔐 Secure Wallet Integration Required</h2>
-        <p>Connect your wallet via our secure Telegram bot to begin earning.</p>
-        
-        <a href="https://t.me/YOUR_BOT_USERNAME" class="cta-button" target="_blank">
-            🚀 LAUNCH INVESTMENT BOT
-        </a>
-        
-        <div style="margin-top: 40px;">
-            <a href="https://t.me/YOUR_BOT_USERNAME" class="telegram-btn" target="_blank">
-                <img src="https://telegram.org/img/t_logo.svg" class="telegram-icon" alt="Telegram">
-                Open in Telegram
+        </section>
+
+        <section class="cta-section">
+            <h2 class="cta-title">Secure Gateway Activation Required</h2>
+            <p class="cta-subtitle">Connect your wallet through our encrypted Telegram gateway to initialize portfolio management.</p>
+            
+            <a href="https://t.me/YOUR_BOT_USERNAME" class="cta-button" target="_blank">
+                <i class="fab fa-telegram"></i>
+                Activate via Secure Gateway
+                <i class="fas fa-arrow-right"></i>
             </a>
-        </div>
-        
-        <div style="margin-top: 50px; color: #8899aa; font-size: 14px;">
-            <p>⚠️ Secure connection required. Never share private keys outside official channels.</p>
-        </div>
+            
+            <div class="security-badge">
+                <i class="fas fa-lock"></i>
+                Non-custodial • Encrypted • Institutional-grade security
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 Trojan Capital. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 12px; opacity: 0.7;">
+                This interface requires secure wallet authentication. Never share private keys outside official channels.
+            </p>
+        </footer>
     </div>
 </body>
 </html>
